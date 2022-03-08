@@ -8,6 +8,4 @@
 <p>view your page</p>
 <button> <a href="user-page">HERE</a></button>
 
-<p>hejhejhej</p>
-
 @include('footer')
