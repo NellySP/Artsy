@@ -21,4 +21,6 @@
     <button type="submit">Login</button>
 </form>
 
+<p>Register new user or only login?</p>
+
 @include('footer')
