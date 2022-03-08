@@ -6,7 +6,7 @@
 
 <h1>Welcome to Artsy</h1>
 
-<form method="post">
+<form method="post" action="/login">
     @csrf
     <div>
         <label for="email">Email</label>
