@@ -20,11 +20,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+
 Route::view('/', 'index')->name('login')->middleware('guest');
 Route::post('login', LoginController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('logout', LogoutController::class);
 Route::get('user-page', UserController::class)->middleware('auth');
+
+// hur sätter man auth på dessa?? middleware
+
+Route::get('shop', function () {
+    return view('shop');
+});
+Route::get('admin', function () {
+    return view('admin');
+});
+Route::get('exhibitions', function () {
+    return view('exhibitions');
+});
