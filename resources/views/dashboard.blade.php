@@ -1,3 +1,5 @@
+@include('header')
+
 <h1>hej Dashboard</h1>
 
 <p>Hello {{$user->name}}!</p>
@@ -5,3 +7,5 @@
 
 <p>view your page</p>
 <button> <a href="user-page.php">HERE</a></button>
+
+@include('footer')
