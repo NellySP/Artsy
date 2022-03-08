@@ -21,6 +21,16 @@
     <button type="submit">Login</button>
 </form>
 
-<p>Register new user or only login?</p>
+<h2>Registration</h2>
+
+<form action="" method="post">
+    <label for="username">Username</label>
+    <input type="text" name="username" placeholder="Username" required><br>
+    <label for="email">Email</label>
+    <input type="text" name="email" placeholder="Email Adress" required><br>
+    <label for="password">Password</label>
+    <input type="password" name="password" placeholder="Password" required><br><br>
+    <input type="submit" name="submit" value="Register" class="login-button">
+</form>
 
 @include('footer')
