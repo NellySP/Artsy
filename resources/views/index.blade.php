@@ -8,6 +8,8 @@
 
 <h1>Welcome to Artsy</h1>
 
+<p>Already a member? Log in here!</p>
+
 <form method="post" action="/login">
     @csrf
     <div>
@@ -21,15 +23,19 @@
     <button type="submit">Login</button>
 </form>
 
+<!-- If we gon have it, we can have it here -->
+
 <h2>Registration</h2>
+<p>Register here and join our world of exclusive art</p>
 
 <form action="" method="post">
+    @csrf
     <label for="username">Username</label>
-    <input type="text" name="username" placeholder="Username" required><br>
+    <input type="text" name="username" required><br>
     <label for="email">Email</label>
-    <input type="text" name="email" placeholder="Email Adress" required><br>
+    <input type="text" name="email" required><br>
     <label for="password">Password</label>
-    <input type="password" name="password" placeholder="Password" required><br><br>
+    <input type="password" name="password" required><br><br>
     <input type="submit" name="submit" value="Register" class="login-button">
 </form>
 

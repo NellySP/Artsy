@@ -2,12 +2,14 @@
 
 <p>Here you can do admin stuff</p>
 <p>Like add art?</p>
+<p>mark art as sold?</p>
 
 <!-- Add controller for this? To add to database -->
 <!-- Do we need enctype? -->
 
 <div>
     <form action="" method="post" enctype="multipart/form-data">
+        @csrf
         <label for="avatar">Choose a picture of an artwork to upload!</label><br><br>
         <input type="file" name="art" id="art" accept=".jpg, .jpeg" required><br><br>
         <label for="artwork">Artwork:</label><br>
