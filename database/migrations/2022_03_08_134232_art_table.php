@@ -19,7 +19,8 @@ return new class extends Migration
                 $table->string('artist');
                 $table->string('exhibition');
                 $table->integer('year');
-                $table->boolean('false');
+                $table->boolean('like');
+                $table->text('filename');
             });
         }
     }
