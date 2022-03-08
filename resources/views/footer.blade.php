@@ -1,5 +1,5 @@
 </div>
-<p>detta e footer</p>
+<p>Artsy 2021</p>
 <script src="/resources/js/app.js"></script>
 </body>
 
