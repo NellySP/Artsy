@@ -4,6 +4,8 @@
 </p>
 @endif
 
+<h1>Welcome to Artsy</h1>
+
 <form method="post">
     @csrf
     <div>
