@@ -3,23 +3,23 @@
 <form method="post" action="upload" enctype="multipart/form-data">
     @csrf
     <div>
-        <label for="title">Title:</label>
-        <input type="text" id="title" name="title">
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
     </div>
 
     <div>
-        <label for="image">Image:</label>
-        <input type="text" id="image" name="image">
+        <label for="image">Image:</label><br>
+        <input type="text" id="image" name="image"><br>
     </div>
 
     <div>
-        <label for="price">Artist:</label>
-        <input type="text" id="artist" name="artist">
+        <label for="price">Artist:</label><br>
+        <input type="text" id="artist" name="artist"><br>
     </div>
 
     <div>
-        <label for="exhibition">Exhibition:</label>
-        <input type="text" id="exhibition" name="exhibition">
+        <label for="exhibition">Exhibition:</label><br>
+        <input type="text" id="exhibition" name="exhibition"><br><br>
     </div>
 
     <div>
