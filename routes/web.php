@@ -3,10 +3,9 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
-use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
 
 
 
@@ -28,8 +27,10 @@ Route::post('login', LoginController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('logout', LogoutController::class);
 Route::get('user-page', UserController::class)->middleware('auth');
-Route::get('upload', [PhotoController::class, 'Create']);
-Route::post('upload', [PhotoController::class, 'Store']);
+// Route::get('admin', [UploadController::class, '']);
+// Route::post('admin', [UploadController::class, '']);
+Route::post('upload', UploadController::class)->middleware('auth');
+Route::view('admin', 'admin/upload')->name('upload');
 
 // hur sätter man auth på dessa?? middleware
 

@@ -2,7 +2,6 @@
 
 <h2>Look at all those exhibitions!</h2>
 
-<img src="" alt="representative image">
 <p>list of all exhibitions that leads to a single exhibition page?</p>
 
 <?php
@@ -14,7 +13,7 @@ $photos = DB::select('select * from photos'); ?>
 <ul>
 
     @foreach ($photos as $photo)
-    <li>{{$photo->title}}<img src="./images/<?= $photo->filename ?>" alt=""></button> </li>
+    <li>{{$photo->title}}<br><img src="./images/<?= $photo->filename ?>" alt=""></button> </li>
     @endforeach
 </ul>
 
