@@ -6,3 +6,15 @@ img {
 body {
     background-color: bisque;
 }
+
+ul li {
+    display: inline;
+}
+
+nav a {
+    /* text-decoration: none; */
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    padding: 1em;
+}

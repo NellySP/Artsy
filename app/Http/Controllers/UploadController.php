@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UploadController extends Controller
 {
@@ -19,6 +20,11 @@ class UploadController extends Controller
         $image->image = $request->input('image');
         $image->save();
 
-        return back();
+        $image = Auth::image();
+        return view('admin', [
+            'image' => $image
+        ]);
+
+        // return back();
     }
 }
