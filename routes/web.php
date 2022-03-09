@@ -27,19 +27,15 @@ Route::post('login', LoginController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('logout', LogoutController::class);
 Route::get('user-page', UserController::class)->middleware('auth');
-// Route::get('admin', [UploadController::class, '']);
-// Route::post('admin', [UploadController::class, '']);
 Route::post('upload', UploadController::class)->middleware('auth');
-Route::view('admin', 'admin/upload')->name('upload');
-
-// hur sätter man auth på dessa?? middleware
+// Route::view('admin', 'admin/upload')->name('upload');
 
 Route::get('shop', function () {
     return view('shop');
 });
-// Route::get('admin', function () {
-//     return view('admin');
-// });
+Route::get('admin', function () {
+    return view('admin');
+});
 Route::get('exhibitions', function () {
     return view('exhibitions');
 });

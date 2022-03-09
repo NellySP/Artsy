@@ -2,6 +2,14 @@
 
 <h2>Look at all those exhibitions!</h2>
 
+@foreach ($images as $image)
+<div>
+    <p>{{$image->title}}</p>
+    <img src="{{ $image->image }}" alt="">
+</div>
+
+@endforeach
+
 <p>list of all exhibitions that leads to a single exhibition page?</p>
 
 <?php

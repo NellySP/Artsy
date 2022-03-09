@@ -8,8 +8,8 @@
     </div>
 
     <div>
-        <label for="image">Image (URL):</label>
-        <input type="file" id="image" name="image">
+        <label for="image">Image:</label>
+        <input type="text" id="image" name="image">
     </div>
 
     <div>
