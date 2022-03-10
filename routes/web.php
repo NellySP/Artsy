@@ -31,8 +31,11 @@ Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('logout', LogoutController::class);
 Route::get('user-page', UserController::class)->middleware('auth');
 Route::post('upload', UploadController::class)->middleware('auth');
-Route::get('admin', UploadController::class)->middleware('auth');
+// Route::get('admin', UploadController::class)->middleware('auth');
 Route::get('exhibitions', ImageController::class)->middleware('auth');
 Route::get('signup', function () {
     return view('signup');
+});
+Route::get('admin', function () {
+    return view('admin');
 });
