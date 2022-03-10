@@ -20,11 +20,11 @@ class UploadController extends Controller
         $image->image = $request->input('image');
         $image->save();
 
-        $image = Auth::image();
-        return view('admin', [
-            'image' => $image
-        ]);
+        // $image = Auth::image();
+        // return view('admin', [
+        //     'image' => $image
+        // ]);
 
-        // return back();
+        return back();
     }
 }
