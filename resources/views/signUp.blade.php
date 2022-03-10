@@ -9,10 +9,10 @@
 <h2>Registration</h2>
 <p>Register here and join our world of exclusive art</p>
 
-<form action="" method="post">
+<form action="signup" method="post">
     @csrf
-    <label for="username">Username</label>
-    <input type="text" name="username" required><br>
+    <label for="name">Username</label>
+    <input type="text" name="name" required><br>
     <label for="email">Email</label>
     <input type="text" name="email" required><br>
     <label for="password">Password</label>
