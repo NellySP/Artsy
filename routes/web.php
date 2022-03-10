@@ -34,6 +34,6 @@ Route::get('exhibitions', ImageController::class)->middleware('auth');
 Route::get('admin', function () {
     return view('admin');
 });
-// Route::get('exhibitions', function () {
-//     return view('exhibitions');
-// });
+Route::get('signup', function () {
+    return view('signup');
+});
