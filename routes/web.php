@@ -34,9 +34,13 @@ Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('user-page', UserController::class)->middleware('auth');
 Route::post('upload', UploadController::class)->middleware('auth');
 Route::get('exhibitions', ExhibitionController::class)->middleware('auth');
+// Route::get('singleExhibition', ExhibitionController::class)->middleware('auth');
 
 Route::get('signup', function () {
     return view('signup');
+});
+Route::get('singleExhibition', function () {
+    return view('singleExhibition');
 });
 
 Route::get('admin', function () {

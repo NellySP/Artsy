@@ -17,6 +17,7 @@ class UploadController extends Controller
         $image->title = $request->input('title');
         $image->artist = $request->input('artist');
         $image->exhibition = $request->input('exhibition');
+        $image->exhibition_id = $request->input('exhibition_id');
         $image->image = $request->input('image');
         $image->save();
 

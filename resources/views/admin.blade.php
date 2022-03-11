@@ -23,6 +23,11 @@
     </div>
 
     <div>
+        <label for="exhibition_id">Exhibition id:</label><br>
+        <input type="text" id="exhibition_id" name="exhibition_id"><br><br>
+    </div>
+
+    <div>
         <button type="submit">Submit</button>
     </div>
 

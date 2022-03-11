@@ -7,7 +7,7 @@
 @foreach ($exhibitions as $exhibition)
 <div>
     <img src="/images/{{ $exhibition->exhibition_image }}" alt="picture of art">
-    <p>{{$exhibition->exhibition}}</p>
+    <h3><a href="singleExhibition">{{$exhibition->exhibition}}</a></h3>
 </div>
 
 @endforeach
