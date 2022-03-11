@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('artist');
             $table->string('exhibition');
+            $table->integer('exhibition_id');
             $table->string('image');
         });
     }

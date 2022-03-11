@@ -13,7 +13,6 @@ class Exhibition extends Model
 
     protected $fillable = [
         'exhibition',
-        'artwork_id',
-        'artwork_image',
+        'exhibition_image',
     ];
 }

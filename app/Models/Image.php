@@ -15,6 +15,7 @@ class Image extends Model
         'title',
         'artist',
         'exhibition',
+        'exhibition_id',
         'image',
     ];
 }
