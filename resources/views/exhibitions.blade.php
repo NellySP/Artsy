@@ -4,13 +4,10 @@
 
 <p>list of all exhibitions that leads to a single exhibition page?</p>
 
-@foreach ($images as $image)
+@foreach ($exhibitions as $exhibition)
 <div>
-    <img src="/images/{{ $image->image }}" alt="picture of art">
-    <p>Artwork: {{$image->title}}</p>
-    <p>Artist: {{$image->artist}}</p>
-    <p>Exhibition: {{$image->exhibition}}</p>
-
+    <img src="/images/{{ $exhibition->exhibition_image }}" alt="picture of art">
+    <p>{{$exhibition->exhibition}}</p>
 </div>
 
 @endforeach
