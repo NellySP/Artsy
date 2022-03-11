@@ -5,18 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Photo extends Model
+class Exhibition extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'title',
-        'artist',
-        'exhibition',
-        'year',
-        'like',
-        'filename'
-    ];
+    protected $table = 'exhibitions';
 
-    public $timestamps = false;
+    protected $fillable = [
+        'exhibition',
+        'artwork_id',
+        'artwork_image',
+    ];
 }
