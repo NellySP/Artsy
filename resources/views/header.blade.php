@@ -12,6 +12,6 @@
 <body>
 
     <!-- some kind of logo or site name -->
-    <h1>Artsy</h1>
+    <h1>ARTSY GALLERY</h1>
 
     @include('navigation')
