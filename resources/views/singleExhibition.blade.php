@@ -1,5 +1,5 @@
 @include('header')
 
-<h2>Single Exhibition</h2>
+<h2>{{$exhibition->exhibition}}</h2>
 
 @include('footer')
