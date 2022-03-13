@@ -7,6 +7,7 @@
 @endif
 
 <h2>Sign up to view and collect your art</h2>
+<h3>hejhej</h3>
 
 <p>Already a member? Log in here!</p>
 
