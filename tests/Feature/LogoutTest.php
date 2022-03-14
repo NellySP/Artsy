@@ -21,6 +21,7 @@ class LogoutTest extends TestCase
     public function test_logout_user()
     {
         $user = User::factory()->create();
+        // why are you red?
         $this->actingAs($user);
         $this->followingRedirects($user)->get('logout')->assertok()->assertSeeText('Login');
     }
