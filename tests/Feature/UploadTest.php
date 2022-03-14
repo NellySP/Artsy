@@ -24,4 +24,25 @@ class UploadTest extends TestCase
             ->get('admin');
         $response->assertStatus(200);
     }
+
+    public function test_create_exhibition_content()
+    {
+        $user = new User();
+        $user->name = 'Mr Robot';
+        $user->email = 'example@yrgo.se';
+        $user->password = Hash::make('123');
+        $user->save();
+
+        $attributes = [
+            'title' => 'katt',
+            'artist' => 'katt',
+            'exhibition' => 'katt',
+            'exhibition_id' => '1',
+            'image' => 'katt',
+        ];
+
+        $this->from('/')->followingRedirects()->actingAs($user)->post('art', $attributes);
+
+        $this->assertDatabaseHas('art', $attributes);
+    }
 }
