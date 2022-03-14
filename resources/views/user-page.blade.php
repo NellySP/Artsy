@@ -1,10 +1,8 @@
 @include('header')
 
-<h2>My favorite art</h2>
+<h2>My favorites</h2>
 
-<p>Hello {{$user->name}}!</p>
+<p>on this page you'll see a selection of pieces that you've marked with a like ♡</p>
 
-<p>right here below!</p>
-<p>all liked art in a "list" or something. images and name? </p>
 
 @include('footer')

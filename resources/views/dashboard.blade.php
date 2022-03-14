@@ -1,6 +1,6 @@
 @include('header')
 
-<h1>Welcome {{$user->name}}! </h1>
+<h2>Welcome {{$user->name}}! </h2>
 
 <p>Here is your personal homepage. In the menu above you can visit <br>
     our page exhibitios and your own personal favorites page. </p>
