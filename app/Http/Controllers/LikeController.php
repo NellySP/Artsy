@@ -22,20 +22,9 @@ class LikeController extends Controller
         $like = new Like();
         $like->image_id = $request->input('image_id');
         $like->like = $request->input('like');
-        /*         $like->like = true;
- */
         $like->user_id = Auth::id();
         $like->save();
 
         return back()->with('user', $user);
     }
-
-
-    //     public function __invoke(Like $like)
-    //     {
-    //         $like->completed = true;
-    //         $like->save();
-
-    //         return back();
-    //     }
 }

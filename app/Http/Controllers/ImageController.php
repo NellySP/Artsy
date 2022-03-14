@@ -12,6 +12,8 @@ class ImageController extends Controller
 {
     public function __invoke(Request $request)
     {
+        //  kan detta funka på nåt sätt eller måste vi lägga till
+        // bildens filnamn i like-bordet? Isåfall gör vi det. 
         $user = Auth::user();
         $images = Image::where('id', '=', $user->like['image_id'])->get();
 
