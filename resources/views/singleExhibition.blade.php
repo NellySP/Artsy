@@ -11,6 +11,7 @@
     <form method="post" action="/like">
         @csrf
         <input type="hidden" id="image_id" name="image_id" value="{{$image->id}}">
+        <input type="hidden" id="image_image" name="image_image" value="{{$image->image}}">
         <input type="hidden" id="like" name="like" value="1">
 
         <button type="submit">Like </button>

@@ -7,10 +7,7 @@
 <ul>
 
     @foreach($user->like as $like)
-    <img src="/images/{{$images -> image}}" alt="picture of art">
-    <li>
-        {{ $like->image_id}}
-    </li><br>
+    <img src="/images/{{$like -> image}}" alt="picture of art">
     @endforeach
 </ul>
 
