@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ExhibitionController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\LikeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
@@ -10,8 +11,6 @@ use App\Http\Controllers\SingleexhibitionController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
-
-
 
 
 
@@ -36,6 +35,8 @@ Route::get('user-page', UserController::class)->middleware('auth');
 Route::post('upload', UploadController::class)->middleware('auth');
 Route::get('exhibitions', ExhibitionController::class)->middleware('auth');
 Route::get('singleExhibition/{id}', SingleexhibitionController::class)->middleware('auth');
+Route::post('like', LikeController::class)->middleware('auth');
+
 
 Route::get('signup', function () {
     return view('signup');
