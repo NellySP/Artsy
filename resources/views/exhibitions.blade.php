@@ -1,9 +1,6 @@
 @include('header')
 
-<h2>Look at all those exhibitions!</h2>
-
-<p>list of all exhibitions that leads to a single exhibition page?</p>
-
+<h2>Current exhibitions </h2>
 @foreach ($exhibitions as $exhibition)
 <div>
     <button><a href="singleExhibition/{{$exhibition->id}}"><img src="/images/{{ $exhibition->exhibition_image }}" alt="picture of art"></button>
@@ -11,6 +8,8 @@
 </div>
 
 @endforeach
+
+<p>Click on each images to get to each exhibition.</p>
 
 
 @include('footer')
