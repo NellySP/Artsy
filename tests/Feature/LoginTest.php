@@ -22,29 +22,30 @@ class LoginTest extends TestCase
     public function test_login_user()
     {
         $user = new User();
-        $user->name = 'Mr Robot';
-        $user->email = 'example@yrgo.se';
+        $user->name = 'Nells';
+        $user->email = 'nells@yrgo.se';
         $user->password = Hash::make('123');
         $user->save();
 
         $response = $this
             ->followingRedirects()
             ->post('login', [
-                'email' => 'example@yrgo.se',
+                'email' => 'nells@yrgo.se',
                 'password' => '123',
             ]);
 
-        $response->assertSeeText('Hello, Mr Robot!');
+        $response->assertOk();
     }
+
 
     public function test_login_user_without_password()
     {
-        $response = $this
-            ->followingRedirects()
-            ->post('login', [
-                'email' => 'example@yrgo.se',
-            ]);
+        $user = User::factory()->create();
 
-        $response->assertSeeText('Whoops! Please try to login again.');
+        $response = $this->followingRedirects($user)->post('login', [
+            'email' => $user->email,
+        ]);
+
+        $response->assertSeeText('Woops! Please try to login again.');
     }
 }
