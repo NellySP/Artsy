@@ -4,10 +4,14 @@
 
 <p>on this page you'll see a selection of pieces that you've marked with a like ♡</p>
 
-@foreach($images as $image)
-<img src="/images/{{$image -> image}}" alt="picture of art">
-<p>{{$image->image_id}}</p>
+<ul>
 
-@endforeach
+    @foreach($user->like as $like)
+    <img src="/images/{{$images -> image}}" alt="picture of art">
+    <li>
+        {{ $like->image_id}}
+    </li><br>
+    @endforeach
+</ul>
 
 @include('footer')

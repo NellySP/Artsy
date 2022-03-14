@@ -32,7 +32,7 @@ Route::post('signup', RegisterController::class)->name('signup')->middleware('gu
 Route::get('logout', LogoutController::class);
 Route::get('dashboard', DashboardController::class)->middleware('auth');
 Route::get('user-page', ImageController::class)->middleware('auth');
-// Route::get('user-page', UserController::class)->middleware('auth');
+Route::get('user-page', UserController::class)->middleware('auth');
 Route::post('upload', UploadController::class)->middleware('auth');
 Route::get('exhibitions', ExhibitionController::class)->middleware('auth');
 Route::get('singleExhibition/{id}', SingleexhibitionController::class)->middleware('auth');
