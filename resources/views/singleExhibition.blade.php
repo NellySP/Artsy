@@ -6,7 +6,7 @@
 <div>
     <button><img src="/images/{{$image -> image}}" alt="picture of art"></button>
     <h3>{{$image -> title}}</h3>
-    <h3>{{$image -> id}}</h3>
+    <h3>{{$image -> artist}}</h3>
 
     <form method="post" action="/like">
         @csrf
