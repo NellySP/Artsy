@@ -78,6 +78,8 @@ h1 {
   font-size: 60px;
   text-align: center;
   margin-top: 5%;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #1c3d26;
 }
 
 h2 {
