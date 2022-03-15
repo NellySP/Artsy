@@ -14,8 +14,8 @@ class UploadTest extends TestCase
     public function test_view_admin_form()
     {
         $user = new User();
-        $user->name = 'Mr Robot';
-        $user->email = 'example@yrgo.se';
+        $user->name = 'Mr Nells';
+        $user->email = 'nells@yrgo.se';
         $user->password = Hash::make('123');
         $user->save();
 
