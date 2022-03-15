@@ -23,6 +23,7 @@ class DashboardTest extends TestCase
 
         $response = $this->actingAs($user)
             ->get('dashboard');
+        $response->assertSeeText('Welcome Mr Nells!');
         $response->assertStatus(200);
     }
 
