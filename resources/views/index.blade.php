@@ -6,7 +6,7 @@
 </p>
 @endif
 
-<h2>Sign up to view </h2>
+<h2>Sign up to explore art.</h2>
 
 <p>Already a member? Log in here!</p>
 <div class="signUp">
