@@ -36,7 +36,7 @@ Install this project by following these steps:
 <b> Clone the repository from this address: </b>
 
 ```
-https://github.com/amandaprintz/2do.git
+https://github.com/NellySP/artsy.git
 ```
 
 <br>
