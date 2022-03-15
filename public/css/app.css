@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Jost:wght@100;300;600&display=swap);
 * {
   box-sizing: border-box;
-  /* margin: 0%; */
+  margin: 0%;
 }
 
 img {
@@ -37,9 +37,34 @@ nav a {
   padding: 1em;
 }
 
-form {
+.signUp {
+  margin-top: 2%;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.signUp button {
+  margin-top: 2%;
+  width: 90%;
+}
+
+form {
+  flex-direction: column;
+  max-width: 30%;
+}
+
+form label {
+  font-family: Jost;
+  font-size: medium;
+}
+
+form input {
+  font-family: Jost;
+  margin: 8px 0px;
+  padding: 12px 20px;
+  width: 100%;
+  color: #1c3d26;
 }
 
 h1 {
@@ -63,6 +88,11 @@ p {
   font-family: Jost;
   text-align: center;
   color: #112517;
+}
+
+.bye {
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
@@ -102,10 +132,15 @@ input[type=submit]:hover {
   background-color: #45a049;
 }
 
-div,
 button {
+  font-family: Jost;
+  color: #1c3d26;
+  border: none;
+  font-size: large;
+  font-weight: 600;
+  cursor: pointer;
   border-radius: 35px;
-  background-color: #f2f2f2;
+  background-color: #f2f2f246;
   margin: 6px;
   padding: 20px;
   display: flex;
