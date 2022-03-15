@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Like;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -34,5 +35,27 @@ class LikeTest extends TestCase
             'like' => '1',
             'image' => 'katt',
         ]);
+    }
+
+    use RefreshDatabase;
+    public function test_view_liked_content()
+    {
+        $user = new User();
+        $user->name = 'Mr Nells';
+        $user->email = 'nells@yrgo.se';
+        $user->password = Hash::make('123');
+        $user->save();
+
+        $attributes = new Like();
+        $attributes->user_id = $user->id;
+        $attributes->image_id = '1';
+        $attributes->like = '1';
+        $attributes->image = 'katt';
+        $attributes->save();
+
+        $response = $this->actingAs($user)
+            ->get('user-page');
+        $response->assertSeeText('1');
+        $response->assertStatus(200);
     }
 }
