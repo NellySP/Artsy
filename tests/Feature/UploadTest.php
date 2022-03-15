@@ -28,8 +28,8 @@ class UploadTest extends TestCase
     public function test_create_exhibition_content()
     {
         $user = new User();
-        $user->name = 'Mr Robot';
-        $user->email = 'example@yrgo.se';
+        $user->name = 'Nells';
+        $user->email = 'nells@yrgo.se';
         $user->password = Hash::make('123');
         $user->save();
 
@@ -41,7 +41,7 @@ class UploadTest extends TestCase
             'image' => 'katt',
         ];
 
-        $this->from('/')->followingRedirects()->actingAs($user)->post('art', $attributes);
+        $this->from('admin')->actingAs($user)->post('upload', $attributes);
 
         $this->assertDatabaseHas('art', $attributes);
     }
