@@ -55,15 +55,27 @@ https://localhost:8000
 
 # Code Review
 
-Code review written by [name](https://github.com/).
+Code review written by [Alice Nyberg](https://github.com/alicenyberg) & [Anton Marinov](https://github.com/antmar0417).
 
-1. `mylists.php:41-42` -
-2. `index.php:8` -
-3. `register.php:23-27` -
-4. `updatelist.php:22-25` -
-5. `login.php:27-30` -
-6. `navigation.php:8` -
-7. `navigation.php:15` -
-8. `mylists.php:52-73` -
-9. `index.php:19` -
-10. `functions.php:72-85` -
+1. `tip` - Send email doesn’t work.
+2. `tip` - The navbar links are hard read regarding the Accessibility.
+3. `tip` - Same with the p-tag text, consider using different colors!
+4. `footer.blade.php` - The copy rights text is positioned on the one of the input fields.
+5. `admin` - You should tell the user what to do with the image field. Is the user supposed to upload an image?
+6. `tip` - Remember to add comments.
+7. `admin.blade.php:9` - You have used camel case for your classname. Remember to be consistent writing code.
+8. `admin.blade.php:35` - You have used snake case for your id-name.
+9. `tip` - Consider use required on your input fields.
+10. `views` - You have used kebab case on your user-page.blade and snake case on your welcome.email.blade. Maybe pick one? (:
+11. `views` - Same thing with signUp.blade.php and singleExhibition.blade, where you have been using camel case!
+12. `tip` - Remember to use placeholders on your input fields.
+13. `app.css:30` - Rembe to remove commented code.
+14. `signup.blade.php:21` - Use button instead av an input field.
+15. `tip` - Remember to center your pictures.
+16. `singleexhibitionController.php:13` - Remember to remove blank spaces.
+17. `app.css:3` - Rembe to remove commented code.
+18. `css` -Maybe style your sign in-form and sign up-form in the same way? The sign up input-fields have a border-radius for example.
+19. `test` - You've done a great job with your tests!
+20. `readme` - Remember to add an instructions how to run the project.
+
+Overall you've done a great job with good consistancy. Well done! (:
