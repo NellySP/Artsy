@@ -8,11 +8,8 @@
 
 <div class="signUp">
 
-
-
     <form method="post" action="upload" enctype="multipart/form-data">
         @csrf
-
         <div>
             <label for="title">Title:</label><br>
             <input type="text" id="title" name="title"><br>
