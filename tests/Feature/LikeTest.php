@@ -5,7 +5,6 @@ namespace Tests\Feature;
 use App\Models\Like;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Support\Facades\Hash;
 use Tests\TestCase;
 
@@ -24,7 +23,8 @@ class LikeTest extends TestCase
             'user_id' => $user->id,
             'image_id' => '1',
             'like' => '1',
-            'image_image' => 'katt',
+            'image' => 'katt',
+            'image_name' => 'katt',
         ];
 
         $this->followingRedirects()->from('/')->actingAs($user)->post('/like', $attributes);
@@ -34,6 +34,7 @@ class LikeTest extends TestCase
             'image_id' => '1',
             'like' => '1',
             'image' => 'katt',
+            'image_name' => 'katt',
         ]);
     }
 
@@ -51,11 +52,12 @@ class LikeTest extends TestCase
         $attributes->image_id = '1';
         $attributes->like = '1';
         $attributes->image = 'katt';
+        $attributes->image_name = 'katt';
         $attributes->save();
 
         $response = $this->actingAs($user)
             ->get('user-page');
-        $response->assertSeeText('1');
+        $response->assertSeeText('katt');
         $response->assertStatus(200);
     }
 }

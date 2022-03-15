@@ -21,8 +21,9 @@ class LikeController extends Controller
         $user = Auth::user();
         $like = new Like();
         $like->image_id = $request->input('image_id');
-        $like->image = $request->input('image_image');
+        $like->image = $request->input('image');
         $like->like = $request->input('like');
+        $like->image_name = $request->input('image_name');
         $like->user_id = Auth::id();
         $like->save();
 

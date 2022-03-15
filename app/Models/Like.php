@@ -15,6 +15,7 @@ class Like extends Model
         'user_id',
         'image_id',
         'like',
+        'image_name',
 
     ];
 }
