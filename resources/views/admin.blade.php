@@ -1,5 +1,6 @@
 @include('header')
 <br>
+<h2>Upload new collections </h2>
 
 <p class="intro">This is the admin page and will only be avaliable for the admin. <br>
     Here we upload new artwork into our collections. </p><br>
